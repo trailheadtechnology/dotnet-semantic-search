@@ -74,10 +74,9 @@ while (true)
     Console.WriteLine("🤖 AI Embeddings Menu");
     Console.WriteLine("1. 📚 Process Blog Posts (Retrieve and Generate Embeddings)");
     Console.WriteLine("2. 🔍 Search Blog Posts");
-    Console.WriteLine("3. 🧰 Check Vector Store");
-    Console.WriteLine("4. 🚪 Exit");
+    Console.WriteLine("3. 🚪 Exit");
     
-    Console.Write("\nSelect an option (1-4): ");
+    Console.Write("\nSelect an option (1-3): ");
     var choice = Console.ReadLine();
     
     switch (choice)
@@ -89,9 +88,6 @@ while (true)
             await SearchBlogsAsync(embeddingGenerator, vectorService);
             break;
         case "3":
-            await CheckDatabaseContentsAsync(vectorService);
-            break;
-        case "4":
             Console.WriteLine("👋 Goodbye!");
             return;
         default:
@@ -194,25 +190,6 @@ static async Task SearchBlogsAsync(IEmbeddingGenerator<string, Embedding<float>>
     catch (Exception ex)
     {
         Console.WriteLine($"❌  : {ex.Message}");
-    }
-}
-
-static async Task CheckDatabaseContentsAsync(QdrantService vectorService)
-{
-    try
-    {
-        ConsoleHelper.ShowHeader();
-        Console.WriteLine("🔍 Checking Database Contents\n");
-        
-    Console.WriteLine("📊 Running Qdrant diagnostic search...");
-    var dummyVector = new float[768];
-    await vectorService.SearchSimilarBlogPostsAsync(dummyVector, maxResults: 1);
-        
-        Console.WriteLine("\n✅ Database check complete. See above for details.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"❌ Error checking database contents: {ex.Message}");
     }
 }
 

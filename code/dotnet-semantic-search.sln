@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-semantic-search", "src\MicrosoftExtensionsAiSample\dotnet-semantic-search.csproj", "{123AE935-7D38-4836-BDF4-2340E415630B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-semantic-search", "dotnet-semantic-search\dotnet-semantic-search.csproj", "{123AE935-7D38-4836-BDF4-2340E415630B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
