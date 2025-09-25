@@ -1,4 +1,5 @@
-# Fuzzy Wuzzy Was a Search: Semantic Search in .NET
+# Warm and Fuzzy: Semantic Search in .NET
+### Previously: Fuzzy Wuzzy Was a Search: Semantic Search in .NET
 Talk by Jonathan "J." Tower
 
 Searching isn't just about exact matches anymore—users expect search results that understand context and adapt to their input. Enter the world of AI-driven fuzzy search! In this session, we’ll explore how to implement powerful search capabilities in .NET using Microsoft.Extensions.AI, Ollama, ChatGPT, and vectorization techniques. 
