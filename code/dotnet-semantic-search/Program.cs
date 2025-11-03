@@ -34,39 +34,6 @@ catch (Exception ex)
     return;
 }
 
-// TEST: Run automatic search test
-Console.WriteLine("\n🧪 Running automatic search test...");
-try
-{
-    string testQuery = "API security";
-    Console.WriteLine($"🔍 Testing search for: '{testQuery}'");
-    
-    var queryEmbedding = await embeddingGenerator.GenerateEmbeddingAsync(testQuery);
-    var results = await vectorService.SearchSimilarBlogPostsAsync(queryEmbedding.Vector.ToArray(), maxResults: 3);
-    
-    Console.WriteLine($"📋 Search Results: {results.Count} found");
-    
-    if (results.Any())
-    {
-        for (int i = 0; i < results.Count; i++)
-        {
-            var blogPost = results[i];
-            Console.WriteLine($"{i + 1}. {blogPost.Title}");
-            Console.WriteLine($"   🔗 {blogPost.Url}");
-        }
-        Console.WriteLine("✅ Search test PASSED!");
-    }
-    else
-    {
-        Console.WriteLine("❌ Search test FAILED - No results found");
-    }
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"❌ Search test ERROR: {ex.Message}");
-}
-PauseIfInteractive("\nPress any key to continue to menu...");
-
 // Main menu loop
 while (true)
 {
