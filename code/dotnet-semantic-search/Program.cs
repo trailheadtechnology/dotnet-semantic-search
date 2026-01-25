@@ -90,7 +90,7 @@ static async Task ProcessBlogsAsync(IEmbeddingGenerator<string, Embedding<float>
         {
             try
             {
-                var embedding = await embeddingGenerator.GenerateEmbeddingAsync(blogPost.Content);
+                var embedding = await embeddingGenerator.GenerateAsync(blogPost.Content);
                 blogPost.Vector = embedding.Vector.ToArray();
                 
                 await vectorService.SaveBlogPostAsync(blogPost);
@@ -133,7 +133,7 @@ static async Task SearchBlogsAsync(IEmbeddingGenerator<string, Embedding<float>>
         
         Console.WriteLine($"\n🔍 Searching for: '{query}'...");
         
-        var queryEmbedding = await embeddingGenerator.GenerateEmbeddingAsync(query);
+        var queryEmbedding = await embeddingGenerator.GenerateAsync(query);
         
     var results = await vectorService.SearchSimilarBlogPostsAsync(queryEmbedding.Vector.ToArray(), maxResults: 5);
         

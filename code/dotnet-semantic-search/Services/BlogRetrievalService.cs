@@ -160,13 +160,13 @@ public static class BlogRetrievalService
                         foreach (var item in items)
                         {
                             // Extract title, content, category, tags, and URL from each <item>
-                            string title = item.Element("title")?.Value;
+                            string? title = item.Element("title")?.Value;
                             
                             // Try to get full content first, fallback to description if not available
-                            string content = item.Element(XName.Get("encoded", "http://purl.org/rss/1.0/modules/content/"))?.Value 
+                            string? content = item.Element(XName.Get("encoded", "http://purl.org/rss/1.0/modules/content/"))?.Value 
                                           ?? item.Element("description")?.Value;
                             
-                            string urlItem = item.Element("link")?.Value;
+                            string? urlItem = item.Element("link")?.Value;
                             var categories = item.Elements("category").Select(c => c.Value).ToList();
 
                             // Write the title to the console
