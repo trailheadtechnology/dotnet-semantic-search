@@ -34,10 +34,11 @@ catch (Exception ex)
     return;
 }
 
+ConsoleHelper.ShowHeader();
+
 // Main menu loop
 while (true)
 {
-    ConsoleHelper.ShowHeader();
     Console.WriteLine("🤖 AI Embeddings Menu");
     Console.WriteLine("1. 📚 Process Blog Posts (Retrieve and Generate Embeddings)");
     Console.WriteLine("2. 🔍 Search Blog Posts");
@@ -69,7 +70,6 @@ static async Task ProcessBlogsAsync(IEmbeddingGenerator<string, Embedding<float>
 {
     try
     {
-        ConsoleHelper.ShowHeader();
         Console.WriteLine("📚 Processing Blog Posts...\n");
         
         Console.Write("🗑️  Do you want to clear existing blog posts first? (y/N): ");
@@ -119,7 +119,6 @@ static async Task SearchBlogsAsync(IEmbeddingGenerator<string, Embedding<float>>
 {
     try
     {
-        ConsoleHelper.ShowHeader();
         Console.WriteLine("🔍 Search Blog Posts\n");
         
         Console.Write("Enter your search query: ");
