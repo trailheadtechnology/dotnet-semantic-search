@@ -12,4 +12,4 @@ You’ll learn:
 Through live demos and practical examples, you'll leave equipped to build better, more user-friendly search experiences. Whether you're a .NET developer or an AI enthusiast, this session will give you tools to level up your search game.
 
 ## Expert Consultation Offer
-https://bit.ly/th-offer
+https://tinyurl.com/th-offer
