@@ -11,5 +11,5 @@ You’ll learn:
 
 Through live demos and practical examples, you'll leave equipped to build better, more user-friendly search experiences. Whether you're a .NET developer or an AI enthusiast, this session will give you tools to level up your search game.
 
-## Expert Consultation Offer
-https://tinyurl.com/th-offer
+## Schedule Time With Me
+https://trailheadtechnology.com/connect/?t=dotnet-semantic-search
